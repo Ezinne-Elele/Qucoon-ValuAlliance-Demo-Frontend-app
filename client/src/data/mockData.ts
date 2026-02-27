@@ -35,11 +35,19 @@ export const mockPortfolios = [
 ];
 
 export const mockFunds = [
-  { id: "F001", name: "ValuAlliance Growth Fund", type: "Equity", currency: "NGN", nav: 125.48, navDate: "2026-02-21", aum: 32400000000, units: 258250000, benchmark: "NSE All-Share Index", inceptionDate: "2015-01-05", ytdReturn: 18.42, oneYearReturn: 31.85, managementFee: 1.5, performanceFee: 20, status: "Active" },
-  { id: "F002", name: "ValuAlliance Fixed Income Fund", type: "Fixed Income", currency: "NGN", nav: 108.74, navDate: "2026-02-21", aum: 28700000000, units: 263940000, benchmark: "FMDQ Bond Index", inceptionDate: "2016-06-12", ytdReturn: 4.82, oneYearReturn: 14.93, managementFee: 1.0, performanceFee: 0, status: "Active" },
-  { id: "F003", name: "ValuAlliance Money Market Fund", type: "Money Market", currency: "NGN", nav: 100.00, navDate: "2026-02-21", aum: 14600000000, units: 146000000, benchmark: "CBN Overnight Rate", inceptionDate: "2017-03-20", ytdReturn: 2.85, oneYearReturn: 22.40, managementFee: 0.5, performanceFee: 0, status: "Active" },
-  { id: "F004", name: "ValuAlliance Balanced Fund", type: "Balanced", currency: "NGN", nav: 115.22, navDate: "2026-02-21", aum: 9700000000, units: 84190000, benchmark: "Composite (60% NSE / 40% FMDQ)", inceptionDate: "2018-10-01", ytdReturn: 11.64, oneYearReturn: 24.18, managementFee: 1.25, performanceFee: 15, status: "Active" },
+  { id: "F001", name: "ValuAlliance Growth Fund", type: "Equity", currency: "NGN", nav: 125.48, navDate: "2026-02-21", aum: 32400000000, units: 258250000, totalUnitsOutstanding: 680512345.67, totalUnitsOutstandingAsOf: "2026-02-21T16:00:00Z", benchmark: "NSE All-Share Index", inceptionDate: "2015-01-05", ytdReturn: 18.42, oneYearReturn: 31.85, managementFee: 1.5, performanceFee: 20, status: "Active" },
+  { id: "F002", name: "ValuAlliance Fixed Income Fund", type: "Fixed Income", currency: "NGN", nav: 108.74, navDate: "2026-02-21", aum: 28700000000, units: 263940000, totalUnitsOutstanding: 263940000.00, totalUnitsOutstandingAsOf: "2026-02-21T16:00:00Z", benchmark: "FMDQ Bond Index", inceptionDate: "2016-06-12", ytdReturn: 4.82, oneYearReturn: 14.93, managementFee: 1.0, performanceFee: 0, status: "Active" },
+  { id: "F003", name: "ValuAlliance Money Market Fund", type: "Money Market", currency: "NGN", nav: 100.00, navDate: "2026-02-21", aum: 14600000000, units: 146000000, totalUnitsOutstanding: 146000000.00, totalUnitsOutstandingAsOf: "2026-02-21T16:00:00Z", benchmark: "CBN Overnight Rate", inceptionDate: "2017-03-20", ytdReturn: 2.85, oneYearReturn: 22.40, managementFee: 0.5, performanceFee: 0, status: "Active" },
+  { id: "F004", name: "ValuAlliance Balanced Fund", type: "Balanced", currency: "NGN", nav: 115.22, navDate: "2026-02-21", aum: 9700000000, units: 84190000, totalUnitsOutstanding: 84190000.00, totalUnitsOutstandingAsOf: "2026-02-21T16:00:00Z", benchmark: "Composite (60% NSE / 40% FMDQ)", inceptionDate: "2018-10-01", ytdReturn: 11.64, oneYearReturn: 24.18, managementFee: 1.25, performanceFee: 15, status: "Active" },
 ];
+
+export const mockUnitHistory: Record<string, any[]> = {
+  F001: [
+    { date: "2026-02-21", type: "Subscription", units: 1540250.25, netChange: 1540250.25, newTotal: 680512345.67, approvedBy: "Emeka Nwachukwu" },
+    { date: "2026-02-20", type: "Redemption", units: 420500.00, netChange: -420500.00, newTotal: 678972095.42, approvedBy: "Adaeze Okonkwo" },
+    { date: "2026-02-19", type: "Subscription", units: 850000.00, netChange: 850000.00, newTotal: 679392595.42, approvedBy: "Emeka Nwachukwu" },
+  ]
+};
 
 export const mockSecurities: any[] = [
   { id: "S001", ticker: "DANGCEM", name: "Dangote Cement PLC", exchange: "NGX", assetClass: "Equity", sector: "Materials", price: 510.00, priceDate: "2026-02-21", currency: "NGN", change: 12.50, changePct: 2.51, volume: 4820000 },
